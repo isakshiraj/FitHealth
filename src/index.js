@@ -248,7 +248,8 @@ app.get('/download-results-pdf', async (req, res) => {
 });
 
 // === Server Start ===
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
+
