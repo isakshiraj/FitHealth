@@ -3,7 +3,7 @@ const session = require("express-session");
 const path = require("path");
 const hbs = require("hbs");
 const collection = require("./mongodb");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
 
