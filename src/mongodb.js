@@ -1,39 +1,27 @@
 const mongoose = require("mongoose");
+require("dotenv").config(); // Make sure this is at the top
 
-// Connect to the database
-mongoose.connect("mongodb://localhost:27017/DailyIntakeTracker")
-    .then(() => {
-        console.log("mongodb connected");
-    })
-    .catch(() => {
-        console.log("failed to connect");
-    });
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.error("MongoDB connection error:", err));
 
-// Define the schema
+// Your schema and model below
 const LogInSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
     results: [
-  {
-    date: String,
-    fluidintakestatus: String,
-    mealsstatus: String,
-    fruitssnackjunkfoodstatus: String
-  }
-]
-
+        {
+            date: String,
+            fluidintakestatus: String,
+            mealsstatus: String,
+            fruitssnackjunkfoodstatus: String
+        }
+    ]
 });
 
-const collection = new mongoose.model("LogInConnection", LogInSchema);
-
+const collection = mongoose.model("LogInConnection", LogInSchema);
 module.exports = collection;
