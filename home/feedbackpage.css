@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: #caf0f8;
+}
+
+
+header {
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-logo img {
+  height: 40px;
+  padding-left: 30px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin-left: 300px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+/* Logo styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.logo-icon {
+  height: 35px;
+  width: 50px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: navy;
+} 
+
+
+/***********************Content**********************************/
+
+.feedbackpage {
+    text-align: center;
+    padding: 20px;
+}
+
+.feedbackpage h1 {
+    font-size: 50px;
+    color: #333;
+    margin: 0;
+}
+
+
+/* Feedback form styles */
+.contact-right {
+    max-width: 700px;
+    height: 85vh;
+    margin-top: 20px;
+    margin-left: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Light shadow for depth */
+    background-color: white;
+}
+
+.contact-right h4 {
+    color: black; /* Dark gray color for section headers */
+    margin-bottom: -10px; /* Space between headers and input fields */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-right p {
+    margin: 15px 0; /* Space between input fields */
+}
+
+.contact-right textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #95B4CC; 
+    border-radius: 10px;
+    resize: vertical; /* Allow vertical resizing of textarea */
+    background-color: #95B4CC;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.contact-right input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #95B4CC;
+    border-radius: 10px;
+    resize: vertical; /* Allow vertical resizing of textarea */
+    background-color: #95B4CC;
+    color: black;
+    font-size: 18px;
+}
+
+.btn2 {
+    background-color: #6b8ba4; /* Greenish color for submit button */
+    color: #ffffff; /* White text color for button */
+    border: 1px solid #6b8ba4;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.btn2:hover {
+    background-color: #ffffff; /* Darker greenish color on hover */
+    color: #6b8ba4;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid #6b8ba4;
+}
+
+
+
+
+
+/*********agter submitting  will print*************/
+#msg {
+    color: #2b4c65;
+    margin-top: 15px;
+    display: block;
+    font-size: 20px;
+}
+
+
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+

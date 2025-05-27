@@ -1,0 +1,614 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+}
+
+
+header {
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-logo img {
+  height: 40px;
+  padding-left: 30px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin-left: 300px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+.navbar-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown wrapper containing icon + menu */
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Show dropdown when hovering over the icon or menu */
+.dropdown-wrapper:hover .dropdown-menu {
+  display: flex;
+}
+
+/* User icon */
+.user-toggle {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Directly below user icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 5px 0;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Logo styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.logo-icon {
+  height: 35px;
+  width: 50px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: navy;
+}
+
+
+/***********************Main Content**********************************/
+
+.mainContent {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+    background-image: url('images/mainBG.png'); /* Add this line */
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(61, 101, 77, 0.5); /* semi-transparent black */
+    z-index: 0;
+}
+
+/* Raise the z-index of the text content */
+.mainContent * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.headingmain {
+    color: white;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 500px;
+}
+
+.para {
+    color: rgb(82, 35, 35);
+    text-align: left;
+    font-size: 25px;
+    margin-left:100px;
+    margin-right: 400px
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+/* FirstContent Section: Vision, Mission, Impact */
+.FirstContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #e9f5ec;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card1, .card2, .card3 {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 350px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: translateY(-5px);
+    background-color: #bbf8be;
+}
+
+.wave-container {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave {
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    height: 60px;
+    clip-path: ellipse(60% 100% at 50% 0%);
+}
+
+
+
+/*secondContent Section*/
+/* .secondContent {
+    background: #f8f8f8;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.secondContent h1 {
+    font-size: 32px;
+    color: #2e7d32;
+}
+
+.secondContent p {
+    max-width: 1000px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}  */
+
+
+
+.services-section {
+    background-color: #f9f9f9;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.services-heading {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 25px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.comparison-section {
+    background-color: #f7fdfc;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.comparison-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #065f46;
+}
+
+.comparison-subtext {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comparison-header,
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 0.5fr;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.comparison-header {
+    background-color: #065f46;
+    color: #fff;
+    font-weight: bold;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: #eefaf8;
+}
+
+.comparison-row .fithealth {
+    color: #0f9d58;
+    font-weight: bold;
+}
+
+.comparison-row .others {
+    color: #d93025;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.healthy-living-section {
+  padding: 40px 20px;
+  max-width: 1200px;   /* same width as rest sections */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Content blocks */
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddd; /* line under each block */
+  flex-wrap: wrap;
+}
+
+/* Text styling */
+.content-block .text {
+  flex: 1 1 55%;
+  min-width: 280px;
+}
+
+/* Image containers */
+.content-block .imageRight,
+.content-block .imageLeft {
+  flex: 1 1 40%;
+  min-width: 280px;
+  background-color: #f9f9f9; /* match section bg to avoid white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* optional padding so image not flush with container edges */
+  border-radius: 12px;
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* subtle shadow */
+  /* Remove fixed height here */
+}
+
+/* Images styled */
+.content-block img {
+  max-width: 100%;
+  max-height: 250px; /* max height instead of fixed */
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image on right side */
+.content-block .imageRight {
+  order: 2; /* image after text */
+  text-align: right;
+}
+
+/* Image on left side */
+.content-block .imageLeft {
+  order: 0; /* image before text */
+  text-align: left;
+}
+
+/* Text order */
+.content-block .text {
+  order: 1;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content-block .imageRight,
+  .content-block .imageLeft {
+    order: 0;
+    text-align: center;
+  }
+  
+  .content-block .text {
+    order: 1;
+  }
+
+  .content-block img {
+    height: auto; /* scale with width */
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ThirdContent Section */
+.ThirdContent {
+    background: #ffffff;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.ThirdContent h1 {
+    font-size: 32px;
+    color: #c62828;
+}
+
+.ThirdContent ul {
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+}

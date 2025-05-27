@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Blindness Test</title>
+  <link rel="stylesheet" href="Eyestyles.css" />
+ 
+</head>
+<body>
+<br><br><br><br>
+  <div class="container">
+    <h1>Color Blindness Test</h1>
+    <p>Please identify the number shown in the image below:</p>
+    <ol>
+      <li>Wear <strong>your glasses or contacts</strong> if you have any.</li>  
+      <li>Keep your device at a distance of <strong>arm's length</strong> from your eyes.</li>
+      <li>Keep <strong>both eyes open</strong>.</li>
+      <li>Ensure you're in a well-lit room for the most accurate results.</li>
+    </ol>
+
+    <img id="color-blind-image" src="images/color-blind-test.jpg" alt="Color Blindness Test Image" />
+
+    <br />
+    <input type="text" id="color-blind-input" placeholder="Enter the number you see" />
+    <br />
+    <button onclick="checkColorBlindness()">Submit</button>
+    
+
+    <br /><br />
+    <a href="index.html">← Back to Home</a>
+  </div>
+<br><br><br><br>
+  <script src="Eye.js"></script>
+</body>
+</html>
