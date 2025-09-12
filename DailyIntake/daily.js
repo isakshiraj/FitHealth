@@ -1,8 +1,11 @@
 // Helper functions
 function isFilled(text) {
   const val = text?.trim().toLowerCase();
-  return val && !["", "none", "no", "nothing"].includes(val);
+  return val && ![
+    "", "none", "no", "nothing", "null", "nil", "na", "n/a", "nothing much"
+  ].includes(val);
 }
+
 
 function countItems(text) {
   return (text || "")
