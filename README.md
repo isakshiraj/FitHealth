@@ -24,9 +24,6 @@
 - 🏃 **Healthy Living Tips**  
   Learn the importance of good nutrition, hydration, and regular exercise.
 
-- 🔄 **Light/Dark Mode Toggle**  
-  Enjoy a user-friendly interface with dark and light theme options.
-
 - 📩 **Feedback and Support**  
   Users can submit their feedback to help us improve.
 

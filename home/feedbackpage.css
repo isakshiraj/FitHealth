@@ -59,6 +59,75 @@ header {
   cursor: pointer;
 }
 
+/* Dropdown container */
+.navbar-links li.dropdown {
+  position: relative;
+}
+
+/* Dropdown wrapper containing icon + menu */
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Show dropdown when hovering over the icon or menu */
+.dropdown-wrapper:hover .dropdown-menu {
+  display: flex;
+}
+
+/* User icon */
+.user-toggle {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Directly below user icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 5px 0;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
 
 
 /* Logo styling */
