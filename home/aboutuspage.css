@@ -1,11 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -15,15 +14,8 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
 
-
-
-/* Navbar styling */
+/******************************** Navbar *************************************/
 .navbar {
   display: flex;
   align-items: center;
@@ -31,11 +23,7 @@ header {
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-  height: 40px;
-  padding-left: 30px;
+  position: relative;
 }
 
 .navbar-links {
@@ -43,43 +31,57 @@ header {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 300px;
 }
 
-.navbar-links li {
-  position: relative;
-}
-
-.navbar-links a {
+.navbar-links li a {
   text-decoration: none;
   color: #333;
   padding: 8px 5px;
   font-size: 16px;
-  position: relative;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.navbar-links li a:hover {
+  color: #0077b6;
+}
 
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
 
-/* Logo styling */
+#menu-toggle {
+  display: none;
+}
+
+/*Logo*/
 .logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 10px;
-  padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    padding-left: 20px;
 }
 
 .logo-icon {
-  height: 35px;
-  width: 50px;
+    height: 35px;
+    width: 50px;
 }
 
 .logo-text {
-  font-size: 22px;
-  font-weight: bold;
-  color: navy;
-} 
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
 
 
 
@@ -96,11 +98,6 @@ header {
     margin: 0;
 }
 
-/* .aboutuspage p {
-    font-size: 25px;
-    color: #555;
-    margin: 10px 0 0;
-} */
 
 .container {
     display: flex;
@@ -188,67 +185,151 @@ footer {
     position: relative;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 150px;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.footer-social {
-    margin: 20px 0;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    color: #007bff;
-}
 
 .footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-top: 15px;
+    margin-top: -20px;
     font-size: 14px;
     color: #666;
+}
+
+
+/* Responsive full-width dropdown NAVBAR*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+    .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+    .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+  
+  .navbar-logo{
+    margin-left: -60px;
+  }
+
+  /* Slide down animation */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    max-height: 500px; /* enough space for links */
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+
+/*Responsive */
+@media (max-width: 992px) {
+  .aboutuspage h1 {
+    font-size: 36px;
+  }
+
+  .right-section h2 {
+    font-size: 28px;
+  }
+
+  .right-section p {
+    font-size: 16px;
+  }
+
+  .left-section ul li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 2px solid #666;
+    text-align: center;
+  }
+
+  .left-section ul li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .aboutuspage h1 {
+    font-size: 35px;
+  }
+
+  .right-section h2 {
+    font-size: 24px;
+  }
+
+  .right-section p {
+    font-size: 18px;
+  }
+
+    #contact-us p{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .aboutuspage h1 {
+    font-size: 28px;
+  }
+
+  .right-section h2 {
+    font-size: 20px;
+  }
+
+  .right-section p {
+    font-size: 16px;
+  }
+
+  .left-section ul li a {
+    font-size: 16px;
+  }
+
+  #contact-us p{
+    font-size: 18px;
+  }
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-social a {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  .footer-bottom {
+    font-size: 16px;
+  }
 }
 

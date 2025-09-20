@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +13,8 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
 
-
-
-/* Navbar styling */
+/******************************** Navbar *************************************/
 .navbar {
   display: flex;
   align-items: center;
@@ -30,11 +22,7 @@ header {
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-  height: 40px;
-  padding-left: 30px;
+  position: relative;
 }
 
 .navbar-links {
@@ -42,43 +30,59 @@ header {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 300px;
 }
 
-.navbar-links li {
-  position: relative;
-}
-
-.navbar-links a {
+.navbar-links li a {
   text-decoration: none;
   color: #333;
   padding: 8px 5px;
   font-size: 16px;
-  position: relative;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
+.navbar-links li a:hover {
+  color: #0077b6;
+}
 
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
 
-/* Logo styling */
+#menu-toggle {
+  display: none;
+}
+
+/*Logo*/
 .logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 10px;
-  padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    padding-left: 20px;
 }
 
 .logo-icon {
-  height: 35px;
-  width: 50px;
+    height: 35px;
+    width: 50px;
 }
 
 .logo-text {
-  font-size: 22px;
-  font-weight: bold;
-  color: navy;
-}  
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
+
   
   
   
@@ -171,25 +175,53 @@ footer {
     position: relative;
 }
 
-.footer-social {
-    margin: 20px 0;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    color: #007bff;
-}
-
 .footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
-    font-size: 14px;
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
     color: #666;
+}
+
+
+/* Responsive full-width dropdown NAVBAR */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    /* Slide down animation */
+    #menu-toggle:checked + .menu-icon + .navbar-links {
+        max-height: 500px;
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-logo {
+        margin-left: 0; /* Remove negative margin */
+    }
+
+
 }

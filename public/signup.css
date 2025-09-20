@@ -14,15 +14,9 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
 
 
-
-/* Navbar styling */
+/***************************** Navbar styling ********************************/
 .navbar {
   display: flex;
   align-items: center;
@@ -30,11 +24,7 @@ header {
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-  height: 40px;
-  padding-left: 30px;
+  position: relative;
 }
 
 .navbar-links {
@@ -42,44 +32,62 @@ header {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 300px;
 }
 
-.navbar-links li {
-  position: relative;
-}
-
-.navbar-links a {
+.navbar-links li a {
   text-decoration: none;
   color: #333;
   padding: 8px 5px;
   font-size: 16px;
-  position: relative;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* Logo styling */
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
 .logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 10px;
-  padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-left: 20px;
 }
 
 .logo-icon {
-  height: 35px;
-  width: 50px;
+    height: 35px; /* Adjust as needed */
+    width: 50px;
 }
 
 .logo-text {
-  font-size: 22px;
-  font-weight: bold;
-  color: navy;
+    font-size: 22px;
+    font-weight: bold;
+    color: navy;
+}
+
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
 }
 
 
 
+
+
+/*******************Content***************************/
 
 .container {
     width: 100%;
@@ -131,4 +139,79 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #55aa88;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+/********************************Responsive styles**************************/
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
 }

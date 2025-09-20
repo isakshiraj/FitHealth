@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +14,6 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
 
 /* Navbar styling */
 .navbar {
@@ -27,11 +23,7 @@ header {
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-  height: 40px;
-  padding-left: 30px;
+  position: relative;
 }
 
 .navbar-links {
@@ -39,8 +31,33 @@ header {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 300px;
 }
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
 
 .navbar-links li {
   position: relative;
@@ -145,6 +162,11 @@ header {
   color: navy;
 }
 
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
+
 
 
 /* Image Section */
@@ -227,7 +249,6 @@ header {
 }
 
 /* Footer */
-
 footer {
     background-color: #fff;
     padding: 20px 0;
@@ -236,26 +257,11 @@ footer {
     position: relative;
 }
 
-.footer-social {
-    margin: 20px 0;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    color: #007bff;
-}
 
 .footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
-    font-size: 14px;
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
     color: #666;
 }
 
@@ -300,4 +306,77 @@ footer {
 
 #scrollTopBtn:hover {
   background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+   /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Show menu on toggle */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
+   /* Center the user icon */
+  .navbar-links li.dropdown {
+      width: 100%;
+      text-align: center;
+  }
+
+  .dropdown-wrapper {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  /* Make dropdown relative so it flows in column */
+  .dropdown-menu {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 10px auto 0 auto;
+      display: none; /* hidden by default */
+      flex-direction: column;
+  }
+
+  /* Show dropdown when parent has active class */
+  .navbar-links li.dropdown.active .dropdown-menu {
+      display: flex;
+  }
 }

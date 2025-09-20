@@ -16,91 +16,47 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
 
-
-
-/* Navbar styling */
+/***************************** Navbar styling ********************************/
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-    height: 40px;
-    padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
 .navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    margin-left: 300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
 }
 
-.navbar-links li {
-    position: relative;
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.navbar-links a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 5px;
-    font-size: 16px; /*change font size of home, resources, water footprint, time for action, about us*/
-    position: relative;
-    cursor: pointer;
+.navbar-links li a:hover {
+  color: #0077b6;
 }
 
-.navbar-links .dropdown a {
-    display: flex;
-    align-items: center;
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
 
-.navbar-links .dropdown i {
-    margin-left: 3px; /* Adjust gap between text and dropdown arrow */
-    font-size: 10px;
-}
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    /* padding: 10px 0; */
-    list-style: none;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    top: 30px;
-    left: 0;
-    z-index: 1000;
-    min-width: 180px;
-}
-
-.dropdown-menu li {
-    padding: 5px 15px;
-}
-
-.dropdown-menu li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-}
-
-.dropdown-menu li:hover{
-    background-color: rgb(213, 216, 218);
-}
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
+#menu-toggle {
+  display: none;
 }
 
 
@@ -123,44 +79,11 @@ header {
     color: navy;
 }
 
-
-/* Theme toggle button style */
-#theme-toggle {
-  cursor: pointer;
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
 }
 
-#theme-toggle i {
-  font-size: 1.3rem;
-  color: #333;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#theme-toggle i:hover {
-  transform: scale(1.2);
-}
-
-/* Light and Dark mode styling */
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-body.dark-mode .navbar {
-  background-color: #1f1f1f;
-}
-
-body.dark-mode .navbar-links a {
-  color: #f0f0f0;
-}
-
-body.light-mode .navbar-links a {
-  color: #000;
-}
 
 
 /***********************Main Content**********************************/
@@ -197,7 +120,6 @@ body.light-mode .navbar-links a {
     z-index: 1;
 }
 
-
 .headingmain {
     color: white;
     text-align: left;
@@ -216,96 +138,7 @@ body.light-mode .navbar-links a {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Footer styles */
-footer {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    position: relative;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 150px;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.footer-social {
-    margin: 20px 0;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    color: #007bff;
-}
-
-.footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-
-
-
-
-
-
-
-/* FirstContent Section: Vision, Mission, Impact */
+/******************* FirstContent Section: Vision, Mission, Impact *******************/
 .FirstContent {
     display: flex;
     justify-content: space-around;
@@ -347,7 +180,7 @@ footer {
 }
 
 
-
+/*************Services Section***********************/
 .services-section {
     background-color: #f9f9f9;
     padding: 60px 40px;
@@ -399,7 +232,7 @@ footer {
 
 
 
-
+/*****************Healthy Living*****************************/
 
 .healthy-living-section {
   padding: 40px 20px;
@@ -493,16 +326,7 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* ThirdContent Section */
+/************* ThirdContent Section ********************************/
 .ThirdContent {
     background: #ffffff;
     padding: 60px 30px;
@@ -521,8 +345,6 @@ footer {
     line-height: 1.8;
     font-size: 18px;
 }
-
-
 
 .comparison-section {
     background-color: #f7fdfc;
@@ -573,7 +395,7 @@ footer {
     background-color: #eefaf8;
 }
 
-.comparison-row .fithealth {
+.comparison-row .TrackMyFit {
     color: #0f9d58;
     font-weight: bold;
 }
@@ -583,6 +405,8 @@ footer {
     font-weight: bold;
 }
 
+
+/***********************Scroll to Top Button********************************/
 
 #scrollTopBtn {
   display: none; /* Hidden by default */
@@ -603,4 +427,148 @@ footer {
 
 #scrollTopBtn:hover {
   background-color: #0056b3;
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .mainContent {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+    background-image: url('images/logo.png'); /* Add this line */
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent::before {
+    background-color: rgba(107, 161, 128, 0.5);
+}
+
+  /* Text inside main content */
+  .headingmain {
+    color: white;
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .para {
+    color: rgb(82, 35, 35);
+    font-size: 20px;
+    margin: 15px auto;
+    text-align: center;
+    max-width: 90%;
+    font-weight: 700;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Show menu on toggle */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
+
+  /* Disease Risk Preview (ThirdContent) */
+  
+  .content-block{
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  .ThirdContent ul {
+    padding: 0 20px !important; /* reduce side padding */
+    font-size: 14px; /* slightly smaller for readability */
+    line-height: 1;
+  }
+  
+  .ThirdContent li{
+    font-size: 15px;
+  }
+  .ThirdContent h1 {
+    font-size: 24px; /* smaller heading */
+  }
+
+
+
+  /* Comparison Table */
+  .comparison-header,
+  .comparison-row {
+    font-size: 11px; /* smaller font for table rows */
+    padding: 10px 8px; /* smaller padding inside cells */
+  }
+
+  .comparison-heading {
+    font-size: 24px; /* smaller heading */
+  }
+
+  .comparison-subtext {
+    font-size: 16px; /* smaller subtext */
+  }
+ 
 }

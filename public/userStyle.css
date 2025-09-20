@@ -14,13 +14,6 @@ body {
 }
 
 
-header {
-    height: 60px;
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-
 
 /* Navbar styling */
 .navbar {
@@ -30,11 +23,7 @@ header {
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-}
-
-.navbar-logo img {
-  height: 40px;
-  padding-left: 30px;
+  position: relative;
 }
 
 .navbar-links {
@@ -42,8 +31,33 @@ header {
   align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 300px;
 }
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #0077b6;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
 
 .navbar-links li {
   position: relative;
@@ -148,6 +162,10 @@ header {
   color: navy;
 }
 
+.navbar-logo img {
+    height: 40px;
+    padding-left: 30px;
+}
 
 /***********************Main Content**********************************/
 
@@ -183,7 +201,6 @@ header {
     z-index: 1;
 }
 
-
 .headingmain {
     color: white;
     text-align: left;
@@ -202,96 +219,7 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Footer styles */
-footer {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    position: relative;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 150px;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.footer-social {
-    margin: 20px 0;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.footer-social a:hover {
-    color: #007bff;
-}
-
-.footer-bottom {
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-
-
-
-
-
-
-
-/* FirstContent Section: Vision, Mission, Impact */
+/******************* FirstContent Section: Vision, Mission, Impact *******************/
 .FirstContent {
     display: flex;
     justify-content: space-around;
@@ -333,28 +261,7 @@ footer {
 }
 
 
-
-/*secondContent Section*/
-/* .secondContent {
-    background: #f8f8f8;
-    padding: 60px 30px;
-    text-align: center;
-}
-
-.secondContent h1 {
-    font-size: 32px;
-    color: #2e7d32;
-}
-
-.secondContent p {
-    max-width: 1000px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 18px;
-}  */
-
-
-
+/*************Services Section***********************/
 .services-section {
     background-color: #f9f9f9;
     padding: 60px 40px;
@@ -405,69 +312,8 @@ footer {
 }
 
 
-.comparison-section {
-    background-color: #f7fdfc;
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.comparison-heading {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #065f46;
-}
-
-.comparison-subtext {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.comparison-table {
-    max-width: 1000px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.comparison-header,
-.comparison-row {
-    display: grid;
-    grid-template-columns: 1.5fr 0.5fr 0.5fr;
-    padding: 15px 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    align-items: center;
-}
-
-.comparison-header {
-    background-color: #065f46;
-    color: #fff;
-    font-weight: bold;
-}
-
-.comparison-row:nth-child(even) {
-    background-color: #eefaf8;
-}
-
-.comparison-row .fithealth {
-    color: #0f9d58;
-    font-weight: bold;
-}
-
-.comparison-row .others {
-    color: #d93025;
-    font-weight: bold;
-}
-
-
-
-
-
+/*****************Healthy Living*****************************/
 
 .healthy-living-section {
   padding: 40px 20px;
@@ -561,16 +407,7 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* ThirdContent Section */
+/************* ThirdContent Section ********************************/
 .ThirdContent {
     background: #ffffff;
     padding: 60px 30px;
@@ -590,7 +427,67 @@ footer {
     font-size: 18px;
 }
 
+.comparison-section {
+    background-color: #f7fdfc;
+    padding: 50px 20px;
+    text-align: center;
+}
 
+.comparison-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #065f46;
+}
+
+.comparison-subtext {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comparison-header,
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 0.5fr;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.comparison-header {
+    background-color: #065f46;
+    color: #fff;
+    font-weight: bold;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: #eefaf8;
+}
+
+.comparison-row .TrackMyFit {
+    color: #0f9d58;
+    font-weight: bold;
+}
+
+.comparison-row .others {
+    color: #d93025;
+    font-weight: bold;
+}
+
+
+/***********************Scroll to Top Button********************************/
 
 #scrollTopBtn {
   display: none; /* Hidden by default */
@@ -612,3 +509,183 @@ footer {
 #scrollTopBtn:hover {
   background-color: #0056b3;
 }
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    margin-top: -20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .mainContent {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 10px;
+    background-image: url('images/logo.png'); /* Add this line */
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent::before {
+    background-color: rgba(107, 161, 128, 0.5);
+}
+
+  /* Text inside main content */
+  .headingmain {
+    color: white;
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .para {
+    color: rgb(82, 35, 35);
+    font-size: 20px;
+    margin: 15px auto;
+    text-align: center;
+    max-width: 90%;
+    font-weight: 700;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Show menu on toggle */
+  #menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .logo-icon{
+    margin-left: -60px;
+  }
+
+   /* Center the user icon */
+  .navbar-links li.dropdown {
+      width: 100%;
+      text-align: center;
+  }
+
+  .dropdown-wrapper {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+
+  /* Make dropdown relative so it flows in column */
+  .dropdown-menu {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 10px auto 0 auto;
+      display: none; /* hidden by default */
+      flex-direction: column;
+  }
+
+  /* Show dropdown when parent has active class */
+  .navbar-links li.dropdown.active .dropdown-menu {
+      display: flex;
+  }
+
+
+  /* Disease Risk Preview (ThirdContent) */
+  
+  .content-block{
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  .ThirdContent ul {
+    padding: 0 20px !important; /* reduce side padding */
+    font-size: 14px; /* slightly smaller for readability */
+    line-height: 1;
+  }
+  
+  .ThirdContent li{
+    font-size: 15px;
+  }
+  .ThirdContent h1 {
+    font-size: 24px; /* smaller heading */
+  }
+
+
+
+  /* Comparison Table */
+  .comparison-header,
+  .comparison-row {
+    font-size: 11px; /* smaller font for table rows */
+    padding: 10px 8px; /* smaller padding inside cells */
+  }
+
+  .comparison-heading {
+    font-size: 24px; /* smaller heading */
+  }
+
+  .comparison-subtext {
+    font-size: 16px; /* smaller subtext */
+  }
+ 
+}
+

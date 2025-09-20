@@ -10,17 +10,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-       <header class="navbar">
-        <div class="navbar-logo">
-            <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="FitHealth Logo" class="logo-icon">
-                <span class="logo-text">FitHealth</span>
-            </a>
+
+     <header class="navbar">
+        <div class="navbar-logo"> <a href="index.html" class="logo-link"> 
+            <img src="images/logo.png" alt="FitHealth Logo" class="logo-icon"> 
+            <span class="logo-text">FitHealth</span> </a> 
         </div>
+        <!-- Hamburger toggle --> 
+         <input type="checkbox" id="menu-toggle"> 
+         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i> </label>
         <ul class="navbar-links">
             <li><a href="/userHome">Home</a></li>
             <li><a href="/dashboard">DashBoard</a></li>
-                        <li class="dropdown">
+                <li class="dropdown">
                 <div class="dropdown-wrapper">
                     <div class="user-toggle">
                         <i class="fa-solid fa-user"></i>
@@ -33,9 +35,9 @@
             </li>
         </ul>
     </header>
+      
 
   <!---Content--->
- <!----------------------Content----------------------------------->
   <h1 class="faqq">Frequently Asked Questions</h1>
   <p class="fapp">
       Got a question? We're here to answer! If you don't see<br> 
@@ -63,7 +65,7 @@
         <span class="close-btn" onclick="closeAnswer(event, 2)">×</span>
     </div>
     <div class="faq-answer" id="answer2">
-        Yes, FitHealth stores all your daily intake reports, which can be viewed in tabular form and downloaded as PDFs for personal reference.
+        Yes, TrackMyFit stores all your daily intake reports, which can be viewed in tabular form and downloaded as PDFs for personal reference.
     </div>
 </div>
 
@@ -85,7 +87,7 @@
         <span class="close-btn" onclick="closeAnswer(event, 4)">×</span>
     </div>
     <div class="faq-answer" id="answer4">
-        FitHealth offers three online eye tests to evaluate your vision accuracy, focus speed, and cognitive flexibility based on standard medical formats.
+        TrackMyFit offers three online eye tests to evaluate your vision accuracy, focus speed, and cognitive flexibility based on standard medical formats.
     </div>
 </div>
 
@@ -103,11 +105,11 @@
 <!-- FAQ 6 -->
 <div class="faq-item">
     <div class="faq-question" onclick="toggleAnswer(6)">
-        <span>What health risks does FitHealth help identify?</span>
+        <span>What health risks does TrackMyFit help identify?</span>
         <span class="close-btn" onclick="closeAnswer(event, 6)">×</span>
     </div>
     <div class="faq-answer" id="answer6">
-        Based on your inputs and test results, FitHealth can give early insights into potential risks like obesity, high BMI, eye strain, and unhealthy eating patterns.
+        Based on your inputs and test results, TrackMyFit can give early insights into potential risks like obesity, high BMI, eye strain, and unhealthy eating patterns.
     </div>
 </div>
 
@@ -129,7 +131,7 @@
         <span class="close-btn" onclick="closeAnswer(event, 8)">×</span>
     </div>
     <div class="faq-answer" id="answer8">
-        FitHealth is designed for users of all ages, but younger users are advised to explore the platform with parental guidance for best understanding.
+        TrackMyFit is designed for users of all ages, but younger users are advised to explore the platform with parental guidance for best understanding.
     </div>
 </div>
 
@@ -140,7 +142,7 @@
         <span class="close-btn" onclick="closeAnswer(event, 9)">×</span>
     </div>
     <div class="faq-answer" id="answer9">
-        Yes, FitHealth supports dark/light mode toggling to reduce eye strain and provide a comfortable viewing experience based on your preference.
+        Yes, TrackMyFit supports dark/light mode toggling to reduce eye strain and provide a comfortable viewing experience based on your preference.
     </div>
 </div>
 
@@ -189,22 +191,26 @@
     <!-- Footer -->
 
 <footer>
-
-    <div class="footer-social">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-    </div>
-
-
     <div class="footer-bottom">
-        <p>2024 © FitHealth</p>
+        <p>2024 © TrackMyFit</p>
     </div>
 </footer>
 
 <script src="faqscript.js"></script>
+
+<!--For small screen userdropdown-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const userDropdown = document.querySelector('.navbar-links li.dropdown');
+
+    if(userDropdown){
+      userDropdown.querySelector('.user-toggle').addEventListener('click', (e) => {
+        e.preventDefault();
+        userDropdown.classList.toggle('active');
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
