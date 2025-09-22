@@ -10,6 +10,7 @@ html{
 
 body {
     width: 100%;
+    background-color: #caf0f8;
 }
 
 
@@ -93,7 +94,7 @@ body {
     max-width: 700px;
     margin: 2rem auto;
     padding: 0 1rem;
-    background: #f9f9f9;
+    background-color: #caf0f8;
     color: #333;
   }
   h1 {

@@ -11,6 +11,8 @@ html {
 body {
     width: 100%;
     background-color: #caf0f8;
+    overflow: auto;
+    position: relative;
 }
 
 /******************************** Navbar *************************************/

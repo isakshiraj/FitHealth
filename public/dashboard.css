@@ -11,6 +11,7 @@ html{
 
 body {
     width: 100%;
+    background-color: #caf0f8;
 }
 
 
@@ -175,7 +176,7 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 30px;
-  background-color: #fff;
+  background-color: #caf0f8;
 }
 
 .image-section img {
@@ -223,7 +224,7 @@ body {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1abc9c;
+  background-color: #95B4CC;
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -232,7 +233,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #16a085;
+  background-color: #95B4CC;
 }
 
 .report-link {
@@ -245,7 +246,7 @@ body {
 }
 
 .report-link:hover {
-  color: #1abc9c;
+  color: #95B4CC;
 }
 
 /* Footer */
