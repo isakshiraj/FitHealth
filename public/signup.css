@@ -157,16 +157,16 @@ a:hover {
 
 footer {
     background-color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     border-top: 1px solid #ccc;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-
-.footer-bottom {
-    padding-top: 15px;
-    margin-top: -20px;
+.footer-bottom p {
+    margin: 0;
     font-size: 16px;
     color: #666;
 }
@@ -215,6 +215,13 @@ footer {
 
   .logo-icon{
     margin-left: -60px;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 30px;
   }
 
 }

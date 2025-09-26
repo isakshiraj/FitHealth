@@ -387,4 +387,8 @@ footer {
     .close-btn {
         padding-right: 10px;
     }
+
+  .logo-icon{
+    margin-left: -40px;
+  }
 }

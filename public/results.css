@@ -198,14 +198,14 @@ footer {
     padding: 10px 0;
     text-align: center;
     border-top: 1px solid #ccc;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 .footer-bottom p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
 }
 

@@ -98,9 +98,9 @@ app.get("/userHome", (req, res) => {
     res.render("userHome", { username: req.session.username });
 });
 
-app.get("/userFeedback", (req, res) => {
+app.get("/userAboutUs", (req, res) => {
     if (!req.session.username) return res.redirect("/login");
-    res.render("userFeedback", { username: req.session.username });
+    res.render("userAboutUs", { username: req.session.username });
 });
 
 app.get("/userFAQ", (req, res) => {

@@ -381,3 +381,10 @@ footer {
       display: flex;
   }
 }
+
+@media (max-width: 600px) {
+    .logo-icon{
+    margin-left: -60px;
+  }
+  
+}
