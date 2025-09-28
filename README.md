@@ -1,6 +1,8 @@
-# 🌱 FitHealth
+# FitHealth
 
 **FitHealth** is a smart health and wellness platform that helps users track their nutrition, calculate BMI, assess health risks, and improve overall lifestyle with interactive tools and personalized insights.
+
+**Website Link: https://fithealth-ybdi.onrender.com/**
 
 ---
 ## Table of Contents
