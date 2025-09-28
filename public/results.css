@@ -255,4 +255,7 @@ footer {
     margin-left: -60px;
   }
 
+  .container h1{
+    font-size: 28px;
+  }
 }

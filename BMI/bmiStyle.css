@@ -282,4 +282,10 @@ footer {
     margin-left: -60px;
   }
   
+  .calculator{
+    width: 360px;
+  }
+  .bodyContainer{
+    align-items: center;
+  }
 }
